@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://exhentai.org/
+// @match        https://ex/
 //@require  https://code.jquery.com/jquery-3.2.1.min.js
 // @grant        none
 // ==/UserScript==
