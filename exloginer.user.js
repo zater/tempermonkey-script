@@ -3,8 +3,8 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author      zater
-// @match        https://ehantai/
+// @author       You
+// @match        https://exhentai.org/
 //@require  https://code.jquery.com/jquery-3.2.1.min.js
 // @grant        none
 // ==/UserScript==
@@ -12,22 +12,25 @@
 (function() {
     'use strict';
     $(function(){
-        $("<input type=\"text\" id=\"member\"  value=\"member_id\"></input>").appendTo("body").click(function(){
+
+        var member="member_id";
+        var pass="pass_hash";
+        $("<input type=\"text\" id=\"member\"  value=\""+member+"\"></input>").appendTo("body").click(function(){
             $(this).val("");
         });
-        $("<input type=\"text\" id=\"pass\" value=\"pass_hash\"></input>").appendTo("body").click(function(){
+        $("<input type=\"text\" id=\"pass\" value=\""+pass+"\"></input>").appendTo("body").click(function(){
             $(this).val("");
         });
         $("<button name=\"login\">login</button>").appendTo("body").click(function(){
-            var pass=$("#pass").val();
-            var memeber=$("#member").val();
+           pass=$("#pass").val();
+            memeber=$("#member").val();
          delCookie("yay");
             setCookie("ipb_member_id",memeber,999);
           
             setCookie("ipb_pass_hash",pass,999);
         
         });
-
+fresh();
     });
     
     function delCookie(name)  
