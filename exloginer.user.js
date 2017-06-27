@@ -3,7 +3,7 @@
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author      zater
 // @match        https://ehantai/
 //@require  https://code.jquery.com/jquery-3.2.1.min.js
 // @grant        none
