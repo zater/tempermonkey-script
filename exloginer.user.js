@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  try to take over the world!
 // @author       You
-// @match        https://ex/
+// @match        https://exhentai.org/
 //@require  https://code.jquery.com/jquery-3.2.1.min.js
 // @grant        none
 // ==/UserScript==
@@ -12,9 +12,8 @@
 (function() {
     'use strict';
     $(function(){
-
-        var member="member_id";
         var pass="pass_hash";
+        var member="member_id";
         $("<input type=\"text\" id=\"member\"  value=\""+member+"\"></input>").appendTo("body").click(function(){
             $(this).val("");
         });
@@ -23,14 +22,14 @@
         });
         $("<button name=\"login\">login</button>").appendTo("body").click(function(){
            pass=$("#pass").val();
-            memeber=$("#member").val();
+            member=$("#member").val();
          delCookie("yay");
-            setCookie("ipb_member_id",memeber,999);
-          
+            setCookie("ipb_member_id",member,999);
+
             setCookie("ipb_pass_hash",pass,999);
-        
+window.location.reload(); 
         });
-fresh();
+
     });
     
     function delCookie(name)  
